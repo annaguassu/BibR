@@ -1,0 +1,64 @@
+﻿@model BibR.Models.User
+
+<h1>Cadastro</h1>
+
+<p class="receive">Receba promoções e novidades na sua caixa de e-mail</p>
+<hr />
+<div class="align-content-center">
+    <div class="glass-cadastro container">
+        <form asp-action="Cadastro">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label input-neon">Nome Completo</label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label input-neon">Idade</label>
+                <input type="number" asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label input-neon">Celular</label>
+                <input type="tel" asp-for="tel" class="form-control" />
+                <span asp-validation-for="tel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label input-neon">E-mail</label>
+                <input type="email" asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label input-neon">Crie uma senha</label>
+                <input type="password" asp-for="password" class="form-control" />
+                <i class="fa-solid fa-eye mostrar"></i>
+                <i class="fa-solid fa-eye-slash ocultar"></i>
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <label class="control-label input-neon">Confirme a senha</label>
+                <input type="password" asp-for="password" class="form-control" />
+                <i class="fa-solid fa-eye mostrar"></i>
+                <i class="fa-solid fa-eye-slash ocultar"></i>
+                <span asp-validation-for="password" class="text-danger"></span>
+
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="terms" /> Aceito os <a>termos de uso</a>
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Enviar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
