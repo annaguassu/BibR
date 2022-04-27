@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BibR</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -21,10 +21,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Novidades</a>
+                            <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Login">Novidades</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link text-dark" id="navbarDropdownMenuLink" asp-area="" asp-controller="Usuario" asp-action="Login">Outros Jogos</a>
+                            <a class="nav-link" id="navbarDropdownMenuLink" asp-area="" asp-controller="Usuario" asp-action="Login">Outros Jogos</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                               <a class="dropdown-item" href="#">Jogo1</a>
                               <a class="dropdown-item" href="#">Jogo2</a>
@@ -32,17 +32,17 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Sobre Nós</a>
+                            <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Login">Sobre Nós</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Fale Conosco</a>
+                            <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Login">Fale Conosco</a>
                         </li>
                     </ul>
                 </div>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" >
+                    <ul class="navbar-nav flex-grow-1" style="justify-content:end;">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Login">Entrar</a>
+                            <a class="nav-link" asp-area="" asp-controller="Usuario" asp-action="Login">Entrar</a>
                         </li>
                     </ul>
                 </div>
@@ -55,8 +55,28 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="footer text-muted">
+        <!--
+        <div class="baixo">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-35zz"></path>
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0"
+                    fill="#B5FF00"</>
+                    <use xlink:href="#gentle-wave" x="48" y="2"
+                    fill="#A64DFF"</>
+                    <use xlink:href="#gentle-wave" x="48" y="4"
+                    fill="#000000"</>
+                    <use xlink:href="#gentle-wave" x="48" y="6"
+                    fill="#CC2BFF"</>
+
+                </g>
+            </svg>
+        </div>
+        -->
+        <div class="container-fluid" style="background-color:#CC2BFF">
             &copy; 2022 - BibR - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
