@@ -20,10 +20,13 @@ body {
     background: linear-gradient(180.9deg, #030303 31.24%, #4E1471 99.23%);
 }
 
-*{
+* {
     font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
 }
-
+input{
+    outline:0;
+}
 /*-------------Barra de Navegação--------------*/
 
 .nav-link, .name, .linha, .navbar-brand{
@@ -33,6 +36,7 @@ body {
 .navbar {
     background: rgb(0, 0, 0, 0,28);
     backdrop-filter: blur(50px);
+    font-size: 10px;
 }
 
 .nav-item{
@@ -71,7 +75,15 @@ body {
     width:70vw;
     background: rgba(196, 196, 196, 0.16);
     border: 1px solid #A64DFF;
+    color: #13D6E2;
+    font-size: 14px;
+    padding-left: 0.5rem;
+    font-family: 'IBM Plex Mono', monospace;
 }
+
+    .search-bar:focus {
+        outline: 0;
+    }
 
 .pesquisa {
     text-align: center;
@@ -88,6 +100,7 @@ body {
     box-shadow: 0 0 15px #A64DFF;
     box-sizing: border-box;
     backdrop-filter: blur(8px);
+    font-size: 15px;
 }
 
 .btn-download {
@@ -109,6 +122,11 @@ body {
         background: #B5FF00;
         color: #030303;
  }
+
+.fa-rocket-launch {
+    width: 4rem;
+    font-size: 10rem;
+}
 
 /*-------------------Animação Digitação-----------------*/
 .efeito-digitacao {
@@ -151,7 +169,7 @@ body {
     padding-left: 3rem;
     margin-top: 4rem;
 }
-/*==============================   News   =============================*/
+/*==============================   About Us   =============================*/
 .aboutUs{
     padding-bottom: 5rem;
 }
@@ -295,7 +313,13 @@ i {
     margin-top: 2rem;
 }
 
+.ocultar {
+    display: none;
+}
 
+i {
+    cursor: pointer;
+}
 /*==============================   Register Page   =============================*/
 .glass-cadastro.container {
     font-family: 'IBM Plex Mono', monospace;
@@ -311,6 +335,7 @@ i {
     backdrop-filter: blur(50px);
     padding-top: 2rem;
     height: 100%;
+    margin-top: 3rem;
 }
 
 .btn-cadastro.btn {
@@ -332,8 +357,9 @@ i {
     box-shadow: 0 0 25px #B5FF00;
 }
 
-input-neon{
+input-neon {
     font-size: 5px;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .cadastro-title {
@@ -346,4 +372,198 @@ input-neon{
     color: #13D6E2;
     text-shadow: 0px 4px 10px #13D6E2;
     text-align:center;
+}
+
+/*================= Botão Flutuante =================*/
+.menu {
+    filter: url("#shadowed-goo");
+}
+
+.menu-open {
+    background-color: #B5FF00;
+    display: none;
+    border-color: #B5FF00;
+}
+
+.menu-item, .menu-open-button {
+    background-color: #B5FF00;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    color: #000;
+    text-align: center;
+    line-height: 80px;
+    transform: translate3d(0, 0, 0);
+    transition: transform ease-out 200ms;
+    margin-bottom: 3rem;
+
+}
+
+
+.hamburger {
+    width: 20px;
+    height: 3px;
+    background: #000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    margin-left: -8.7px;
+    margin-top: -1.5px;
+    transition: transform 200ms;
+}
+
+.hamburger-1 {
+    transform: translate3d(0, -8px, 0);
+}
+
+.hamburger-2 {
+    transform: translate3d(0, 0, 0);
+}
+
+.hamburger-3 {
+    transform: translate3d(0, 8px, 0);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-1 {
+    transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-2 {
+    transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+.menu-open:checked + .menu-open-button .hamburger-3 {
+    transform: translate3d(0, 0, 0) rotate(-45deg);
+}
+
+.menu {
+    position: fixed;
+    right: 1px;
+    bottom: 40px;
+    width: 5rem;
+    height: 4rem;
+    font-size: 10px;
+    border: 2px #B5FF00;
+}
+
+.menu-item:nth-child(3) {
+    transition-duration: 180ms;
+    border: 2px solid #B5FF00;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(3):hover {
+        color: #B5FF00;
+        border: 2px solid #B5FF00;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #b5ff00;
+        box-shadow: 0 0 15px #b5ff00;
+        text-shadow: 0 0 15px #b5ff00;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(4) {
+    transition-duration: 180ms;
+    border: 2px solid #A64DFF;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(4):hover {
+        color: #A64DFF;
+        border: 2px solid #A64DFF;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #A64DFF;
+        box-shadow: 0 0 15px #A64DFF;
+        text-shadow: 0 0 15px #A64DFF;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(5) {
+    transition-duration: 180ms;
+    border: 2px solid #2dbdff;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(5):hover {
+        color: #2dbdff;
+        border: 2px solid #2dbdff;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #2dbdff;
+        box-shadow: 0 0 15px #2dbdff;
+        text-shadow: 0 0 15px #2dbdff;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-item:nth-child(6) {
+    transition-duration: 180ms;
+    border: 2px solid #fff;
+    background: #c4c4c41f;
+}
+
+    .menu-item:nth-child(6):hover {
+        color: #fff;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 15px #fff;
+        text-shadow: 0 0 15px #fff;
+        backdrop-filter: blur(5px);
+    }
+
+.menu-open-button {
+    z-index: 2;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 400ms;
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    cursor: pointer;
+}
+
+    .menu-open-button:hover {
+        transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    }
+
+.menu-open:checked + .menu-open-button {
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+    transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.menu-open:checked ~ .menu-item {
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+    .menu-open:checked ~ .menu-item:nth-child(3) {
+        transition-duration: 190ms;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(4) {
+        transition-duration: 290ms;
+        transform: translate3d(0, -130px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(5) {
+        transition-duration: 390ms;
+        transform: translate3d(0, -200px, 0);
+    }
+
+    .menu-open:checked ~ .menu-item:nth-child(6) {
+        transition-duration: 490ms;
+        transform: translate3d(0, -270px, 0);
+    }
+
+.icon-flutter {
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    margin-top: -10px;
+    align-content:center;
+    align-items: center;
+    justify-content:center;
+    justify-items: center;
+}
+
+.fa-angles-left{
+    margin-bottom: 20px;
 }

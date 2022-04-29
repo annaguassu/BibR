@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NovaPasta\**" />
+    <Compile Remove="wwwroot\NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
+    <Content Remove="wwwroot\NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="wwwroot\NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
+    <None Remove="wwwroot\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
