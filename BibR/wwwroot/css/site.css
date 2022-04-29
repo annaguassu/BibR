@@ -320,6 +320,17 @@ i {
 i {
     cursor: pointer;
 }
+
+a {
+    color: #13D6E2;
+   
+    text-align: center;
+}
+
+    a:hover {
+        text-shadow: 0px 4px 10px #13D6E2;
+        color: #13D6E2;
+    }
 /*==============================   Register Page   =============================*/
 .glass-cadastro.container {
     font-family: 'IBM Plex Mono', monospace;
