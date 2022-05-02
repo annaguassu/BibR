@@ -27,6 +27,21 @@ body {
 input{
     outline:0;
 }
+
+*::-webkit-scrollbar {
+    width: 9px;
+}
+
+*::-webkit-scrollbar-track {/*barra atras do scroll*/
+    background: #141414;
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {/*o proprio scroll*/
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #141414;
+}
 /*-------------Barra de Navegação--------------*/
 
 .nav-link, .name, .linha, .navbar-brand{
@@ -39,10 +54,14 @@ input{
     font-size: 10px;
 }
 
-.nav-item{
-    list-style:none;
+
+li {
+    list-style: none;
 }
 
+.breadcrumb-item.active, .breadcrumb ol{
+    color: #b5ff00;
+}
 /*---------------Página Inicial-----------------*/
 
 .name, .linha{
@@ -52,7 +71,7 @@ input{
 }
 
 .name {
-    margin-top: 4rem;
+    margin-top: 7rem;
 }
 
 .linha {
@@ -123,10 +142,6 @@ input{
         color: #030303;
  }
 
-.fa-rocket-launch {
-    width: 4rem;
-    font-size: 10rem;
-}
 
 /*-------------------Animação Digitação-----------------*/
 .efeito-digitacao {
@@ -167,9 +182,37 @@ input{
     color: #13D6E2;
     text-shadow: 0px 4px 10px #13D6E2;
     padding-left: 3rem;
-    margin-top: 4rem;
+    
 }
-/*==============================   About Us   =============================*/
+
+.news.section {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+        
+}
+.news.section li {
+    margin-right: 2rem; /*espaçamento entre os cards*/
+    margin-bottom: 0.5rem;
+}
+
+.news {
+    overflow-x: hidden;
+}
+
+.card {
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 10px #A64DFF;
+    backdrop-filter: blur(50px);
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+
+}
+        /*==============================   About Us   =============================*/
 .aboutUs{
     padding-bottom: 5rem;
 }
@@ -180,7 +223,7 @@ footer{
     bottom: 0;
     margin-top: 5rem;
 }
-/*-------------------Animação Rodapé-----------------*/
+/*-------------------Animação Rodapé-----------------
 .waves {
     height: 10rem;
     width: 100vw;
@@ -228,7 +271,6 @@ footer{
         min-height: 40px;
     }
 }
-
 /*==============================   Login Page   =============================*/
 
 .btn:focus{
@@ -388,6 +430,7 @@ input-neon {
 /*================= Botão Flutuante =================*/
 .menu {
     filter: url("#shadowed-goo");
+    z-index: 100;
 }
 
 .menu-open {
@@ -402,9 +445,9 @@ input-neon {
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    color: #000;
+    color: #fff;
     text-align: center;
-    line-height: 80px;
+    line-height: 35px; /*alinhamento dos icones dentro dos botões*/
     transform: translate3d(0, 0, 0);
     transition: transform ease-out 200ms;
     margin-bottom: 3rem;
@@ -565,16 +608,49 @@ input-neon {
         transform: translate3d(0, -270px, 0);
     }
 
-.icon-flutter {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-    margin-top: -10px;
-    align-content:center;
-    align-items: center;
-    justify-content:center;
-    justify-items: center;
+
+
+/* ------------------------------------ Media Queries -------------------------------------------*/
+@media (max-width: 480px){
+    .glass-login.container {
+        width: 80vw;
+    }
+
+    .login-title {
+        font-size: 30px;
+    }
+
+    .glass-cadastro.container {
+        width: 80vw;
+    }
+
+    .cadastro-title {
+        font-size: 10px;
+    }
+
+    .btn-src{
+        font-size: 12px;
+        width: 5.5rem;
+    }
+
+    .search-bar{
+        width: 70vw;
+        align-items: center;
+    }
+
+    .home{
+        align-content: center;
+        text-align: center;
+        align-items:center;
+    }
+
+    .menu{
+        right: 3px;
+    }
 }
 
-.fa-angles-left{
-    margin-bottom: 20px;
+@media (min-width: 600px) and (max-width: 900px) {
+    .search-bar{
+        width: 62vw;
+    }
 }

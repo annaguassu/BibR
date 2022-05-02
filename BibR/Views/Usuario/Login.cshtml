@@ -1,5 +1,11 @@
 ﻿@model BibR.Models.User
 
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Login</li>
+  </ol>
+</nav>
 
 
 
@@ -43,10 +49,8 @@
           <span class="hamburger hamburger-2"></span>  
           <span class="hamburger hamburger-3"></span>  
           </label>  
-          <a asp-controller="Usuario" asp-action="Login" class="menu-item"> <i class="icon-flutter fa-solid fa-angles-left"></i> </a>  
           <a asp-controller="Home" asp-action="Index" class="menu-item"> <i class="icon-flutter fa-solid fa-house"></i> </a>  
-          <a href="#" class="menu-item"> <i class=" icon-flutter fa-solid fa-forward-fast"></i> </a>  
-        </div>  
+          <a asp-controller="Usuario" asp-action="Login" class="menu-item"> <i class="icon-flutter fa-solid fa-angles-left"></i> </a>  
       </div>
  
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1">  
