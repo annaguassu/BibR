@@ -23,6 +23,8 @@ body {
 * {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 input{
     outline:0;
@@ -64,6 +66,28 @@ li {
 }
 /*---------------Página Inicial-----------------*/
 
+.home {
+    display: flex;
+    align-items: center; /* alinhamento vertical*/
+    justify-content: start; /*Começa da esquerda pra direita*/
+}
+
+.tabfoguete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    
+}
+
+.foguetao {
+    margin-left: -16rem;
+    margin-top: 8rem;
+    width: 300px;
+    height: 300px;
+    filter: drop-shadow(0px 4px 4px #13D6E2);
+}
+
 .name, .linha{
     font-family: 'Press Start 2P', cursive;
     margin-left: 4rem;
@@ -72,6 +96,7 @@ li {
 
 .name {
     margin-top: 7rem;
+    font-size: 4rem;
 }
 
 .linha {
@@ -146,13 +171,11 @@ li {
 /*-------------------Animação Digitação-----------------*/
 .efeito-digitacao {
     position: relative;
-    animation: maquinaDeEscrever 4s steps(50) 1s normal both, cursorDeTexto 500ms steps(80) infinite normal;
+    animation: maquinaDeEscrever 4s steps(50) 1s normal both, cursorDeTexto 500ms steps(40) infinite normal;
+
+    animation-iteration-count:infinite;
 }
 
-.efeito-digitacao1 {
-    position: relative;
-    animation: maquinaDeEscrever 5s steps(50) 5s normal both, cursorDeTexto 500ms steps(80) infinite normal;
-}
 
 
 @keyframes maquinaDeEscrever {
@@ -611,7 +634,7 @@ input-neon {
 
 
 /* ------------------------------------ Media Queries -------------------------------------------*/
-@media (max-width: 480px){
+@media (max-width: 650px) {
     .glass-login.container {
         width: 80vw;
     }
@@ -628,29 +651,66 @@ input-neon {
         font-size: 10px;
     }
 
-    .btn-src{
+    .btn-src {
         font-size: 12px;
-        width: 5.5rem;
+        width: 6rem;
+    }
+    
+    .btn-download{
+        width: 80vW;
+        margin-left: 19px;
     }
 
-    .search-bar{
-        width: 70vw;
+    .search-bar {
+        width: 75vw;
         align-items: center;
     }
 
-    .home{
+    .home {
+        display: flex;
         align-content: center;
+        align-items: center; /*horizontal*/
+        justify-content: space-between; /*vertical*/
+        flex-direction: column;
         text-align: center;
-        align-items:center;
     }
 
-    .menu{
+    .name {
+        font-size: 3rem;
+    }
+
+    .linha {
+        font-size: 0.6rem;
+    }
+
+    .name, .linha {
+        display: flex;
+        align-items: center; /* alinhamento vertical*/
+        justify-content: start;
+        margin-left: 4rem;
+    }
+
+    .menu {
         right: 3px;
+    }
+
+    .tabfoguete {
+        display: none;
+    }
+
+    .menu-item, .menu-open-button {
+        line-height: 30px;
     }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (max-width: 1024px) {
     .search-bar{
         width: 62vw;
+    }
+
+    .foguetao {
+        width: 200px;
+        height: 200px;
+        margin-left: 1rem;
     }
 }
