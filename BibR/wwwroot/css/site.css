@@ -64,6 +64,17 @@ li {
 .breadcrumb-item.active, .breadcrumb ol{
     color: #b5ff00;
 }
+
+.fa-bars{
+    color: #b5ff00;
+    font-size: 20px;
+    
+}
+
+.navbar-toggler:focus{
+    border:0;
+    outline: 0;
+}
 /*---------------Página Inicial-----------------*/
 
 .home {
@@ -451,9 +462,16 @@ input-neon {
 }
 
 /*================= Botão Flutuante =================*/
-.menu {
+.menu { /*o bagulho todo*/
     filter: url("#shadowed-goo");
     z-index: 100;
+    position: fixed;
+    right: 1px;
+    bottom: 40px;
+    width: 5rem;
+    height: 4rem;
+    font-size: 10px;
+    border: 2px #B5FF00;
 }
 
 .menu-open {
@@ -478,7 +496,7 @@ input-neon {
 }
 
 
-.hamburger {
+.hamburger {/*O simbolo inicial "3 risquinhos"*/
     width: 20px;
     height: 3px;
     background: #000;
@@ -492,19 +510,19 @@ input-neon {
 }
 
 .hamburger-1 {
-    transform: translate3d(0, -8px, 0);
+    transform: translate3d(0, -8px, 0); /*primeiro risquinho*/
 }
 
 .hamburger-2 {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);/*segundo risquinho*/
 }
 
 .hamburger-3 {
-    transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 8px, 0);/*terceiro risquinho*/
 }
 
 .menu-open:checked + .menu-open-button .hamburger-1 {
-    transform: translate3d(0, 0, 0) rotate(45deg);
+    transform: translate3d(0, 0, 0) rotate(45deg);/*giro dos 3 risquinhos pro x (gira p/ direita*/
 }
 
 .menu-open:checked + .menu-open-button .hamburger-2 {
@@ -513,16 +531,6 @@ input-neon {
 
 .menu-open:checked + .menu-open-button .hamburger-3 {
     transform: translate3d(0, 0, 0) rotate(-45deg);
-}
-
-.menu {
-    position: fixed;
-    right: 1px;
-    bottom: 40px;
-    width: 5rem;
-    height: 4rem;
-    font-size: 10px;
-    border: 2px #B5FF00;
 }
 
 .menu-item:nth-child(3) {
@@ -714,3 +722,4 @@ input-neon {
         margin-left: 1rem;
     }
 }
+
