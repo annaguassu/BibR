@@ -52,14 +52,10 @@ input{
 
 .navbar {
     background: rgb(0, 0, 0, 0,28);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(20px);
     font-size: 10px;
 }
 
-
-li {
-    list-style: none;
-}
 
 .breadcrumb-item.active, .breadcrumb ol{
     color: #b5ff00;
@@ -102,7 +98,6 @@ li {
 .name, .linha{
     font-family: 'Press Start 2P', cursive;
     margin-left: 4rem;
-    
 }
 
 .name {
@@ -121,7 +116,7 @@ li {
 }
 
 .search-bar {
-    margin-top: 2rem;
+    margin-top: 6rem;
     box-shadow: 0 0 5px #A64DFF;
     box-shadow: 0 0 15px #A64DFF;
     box-sizing: border-box;
@@ -210,12 +205,12 @@ li {
 }
 
 /*==============================   News   =============================*/
-.titles {
+.title-News,.title-aboutUs {
     font-size: 1.2rem;
     font-family: 'Press Start 2P';
     color: #13D6E2;
     text-shadow: 0px 4px 10px #13D6E2;
-    padding-left: 3rem;
+
     
 }
 
@@ -232,6 +227,23 @@ li {
     margin-bottom: 0.5rem;
 }
 
+.news.section::-webkit-scrollbar{
+}
+
+    .news.section::-webkit-scrollbar-track { /*barra atras do scroll*/
+        background: #00000000;
+        border-radius: 20px;
+        width: 3px;
+    }
+
+    .news.section::-webkit-scrollbar-thumb { /*o proprio scroll*/
+        background-color: #;
+        border-radius: 20px;
+        border: 10px solid #00000000;
+        width: 3px;
+        height: 3px;
+    }
+
 .news {
     overflow-x: hidden;
 }
@@ -244,19 +256,52 @@ li {
     color: #B5FF00;
     border-radius: 5px;
     border: 2px solid #A64DFF;
-
+    height: 14rem;
 }
         /*==============================   About Us   =============================*/
 .aboutUs{
     padding-bottom: 5rem;
 }
 
+#aboutUs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-aboutUs {
+    text-align: justify;
+    font-family: 'IBM Plex Mono', monospace;
+
+    width: 40%;
+    height: 100%;
+    color: #B5FF00;
+    border-radius: 5px;
+    border: 2px solid #A64DFF;
+    background: #c4c4c442;
+    box-shadow: 0 0 5px #A64DFF;
+    box-shadow: 0 0 25px #A64DFF;
+    box-shadow: 0 0 30px #A64DFF;
+    backdrop-filter: blur(50px);
+    
+    padding-top: 2rem;
+    margin-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.title-aboutUs {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 /*---------------------- Rodapé ---------------------*/
 footer{
     position: absolute;
     bottom: 0;
     margin-top: 5rem;
 }
+
 /*-------------------Animação Rodapé-----------------
 .waves {
     height: 10rem;
@@ -349,6 +394,7 @@ footer{
     letter-spacing: 1px;
     backdrop-filter: blur(50px);
     justify-content: center;
+    margin-bottom: -2rem;
 }
 
 .login-title {
@@ -423,6 +469,7 @@ a {
     padding-top: 2rem;
     height: 100%;
     margin-top: 3rem;
+    margin-bottom: -8rem
 }
 
 .btn-cadastro.btn {
@@ -708,6 +755,10 @@ input-neon {
 
     .menu-item, .menu-open-button {
         line-height: 30px;
+    }
+
+    .glass-aboutUs{
+        width: 90%;
     }
 }
 
